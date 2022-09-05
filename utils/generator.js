@@ -8,4 +8,8 @@ const generateStoreCode = () => {
   });
 };
 
-export { generateStoreCode };
+const dateFormat = () => {
+  return new Date(Date.now()).toLocaleString();
+};
+
+export { generateStoreCode, dateFormat };
