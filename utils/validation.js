@@ -8,8 +8,8 @@ const isValidEmail = (email) => {
   return regEx.test(email);
 };
 
-const comparePassword = (password, hashPassword) => {
-  return bcrypt.compareSync(password, hashPassword);
+const comparePassword = async (password, hashPassword) => {
+  return await bcrypt.compare(password, hashPassword);
 };
 
 const isValidPassword = (password) => {

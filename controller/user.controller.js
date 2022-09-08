@@ -87,7 +87,7 @@ const saveNewUser = async (req, res) => {
       return res.status(500).send({ error: 'Password is not valid' });
     }
 
-    let hashedPassword = await bcrypt.hash(password, 12);
+    let hashedPassword = await bcrypt.hash(password, 10);
     let values = [username, hashedPassword, email, fullname, createdOn];
 
     let saveUserQuery = queryList.SAVE_USER_QUERY;
